@@ -1,0 +1,829 @@
+[
+    {
+        "id": "590206d4e21fcd94",
+        "type": "tab",
+        "label": "流程1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f37e469f.6344c8",
+        "type": "tab",
+        "label": "Lab 15-5",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "3e11bccd.52fd44",
+        "type": "mqtt-broker",
+        "name": "Mosquitto",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "compatmode": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "97a7dd0e.47386",
+        "type": "ui_group",
+        "name": "Temperture",
+        "tab": "9e253195.a496a",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "51f97a49.7f0384",
+        "type": "ui_group",
+        "name": "Humidity",
+        "tab": "9e253195.a496a",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "980a7c0b.62db3",
+        "type": "ui_group",
+        "name": "LED Control",
+        "tab": "9e253195.a496a",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4f10daba92250eee",
+        "type": "postgreSQLConfig",
+        "name": "",
+        "host": "dpg-cpi8miuct0pc73foca6g-a.oregon-postgres.render.com",
+        "hostFieldType": "str",
+        "port": "5432",
+        "portFieldType": "num",
+        "database": "iot2024",
+        "databaseFieldType": "str",
+        "ssl": "true",
+        "sslFieldType": "bool",
+        "applicationName": "",
+        "applicationNameType": "str",
+        "max": "10",
+        "maxFieldType": "num",
+        "idle": "1000",
+        "idleFieldType": "num",
+        "connectionTimeout": "10000",
+        "connectionTimeoutFieldType": "num",
+        "user": "ghliaw123",
+        "userFieldType": "str",
+        "password": "47B1Q8208x9LbyYePmTOR2XyYlRCvVss",
+        "passwordFieldType": "str"
+    },
+    {
+        "id": "9e253195.a496a",
+        "type": "ui_tab",
+        "name": "Real-time Data & Control",
+        "icon": "dashboard",
+        "order": 4,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "57472d0ef6fc5f96",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "a531153b436f8f0e",
+        "type": "postgreSQLConfig",
+        "name": "",
+        "host": "dpg-cpkgk5nsc6pc73esu2eg-a.oregon-postgres.render.com",
+        "hostFieldType": "str",
+        "port": "5432",
+        "portFieldType": "num",
+        "database": "iot2024_11040014a",
+        "databaseFieldType": "str",
+        "ssl": "true",
+        "sslFieldType": "bool",
+        "applicationName": "",
+        "applicationNameType": "str",
+        "max": "10",
+        "maxFieldType": "num",
+        "idle": "1000",
+        "idleFieldType": "num",
+        "connectionTimeout": "10000",
+        "connectionTimeoutFieldType": "num",
+        "user": "isu11040014a",
+        "userFieldType": "str",
+        "password": "nWRjL23K3vkuzZiSA88X6TrtJMJ8UB9T",
+        "passwordFieldType": "str"
+    },
+    {
+        "id": "22f9ec4a.8a4bd4",
+        "type": "mqtt in",
+        "z": "f37e469f.6344c8",
+        "name": "",
+        "topic": "11040014a/temp_hum/json",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "3e11bccd.52fd44",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 150,
+        "y": 360,
+        "wires": [
+            [
+                "634e6fbf.c2899",
+                "c95a4e19baf64d55"
+            ]
+        ]
+    },
+    {
+        "id": "634e6fbf.c2899",
+        "type": "debug",
+        "z": "f37e469f.6344c8",
+        "name": "MQTT debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 330,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "5100de84.a489e",
+        "type": "ui_gauge",
+        "z": "f37e469f.6344c8",
+        "name": "Termerature Gauge",
+        "group": "97a7dd0e.47386",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "",
+        "label": "°C",
+        "format": "{{msg.payload.temp | number:1}}",
+        "min": "-20",
+        "max": "50",
+        "colors": [
+            "#1827fb",
+            "#04b922",
+            "#ca3838"
+        ],
+        "seg1": "15",
+        "seg2": "28",
+        "diff": false,
+        "className": "",
+        "x": 550,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "8a90ba56.f20528",
+        "type": "ui_gauge",
+        "z": "f37e469f.6344c8",
+        "name": "Humidity Gauge",
+        "group": "51f97a49.7f0384",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "wave",
+        "title": "",
+        "label": "%",
+        "format": "{{msg.payload.hum | number:1}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 540,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "cf845e28.5929c",
+        "type": "ui_text",
+        "z": "f37e469f.6344c8",
+        "group": "97a7dd0e.47386",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Temperature Text",
+        "label": "Current temperature : ",
+        "format": "{{msg.payload.temp}}&deg;C",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 550,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "cdd8a111.caf7",
+        "type": "ui_text",
+        "z": "f37e469f.6344c8",
+        "group": "51f97a49.7f0384",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Humidity Text",
+        "label": "Current humidity : ",
+        "format": "{{msg.payload.hum}}%",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 540,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "a837a6ce.c0d8d8",
+        "type": "mqtt out",
+        "z": "f37e469f.6344c8",
+        "name": "",
+        "topic": "11040014a/led_control",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "3e11bccd.52fd44",
+        "x": 320,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "bea9fcd2.ea8a4",
+        "type": "ui_switch",
+        "z": "f37e469f.6344c8",
+        "name": "",
+        "label": "LED Switch",
+        "tooltip": "",
+        "group": "980a7c0b.62db3",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "1",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "0",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "className": "",
+        "x": 110,
+        "y": 620,
+        "wires": [
+            [
+                "a837a6ce.c0d8d8"
+            ]
+        ]
+    },
+    {
+        "id": "c95a4e19baf64d55",
+        "type": "json",
+        "z": "f37e469f.6344c8",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 350,
+        "y": 360,
+        "wires": [
+            [
+                "7a1e3cdca7e8adec",
+                "cf845e28.5929c",
+                "5100de84.a489e",
+                "cdd8a111.caf7",
+                "8a90ba56.f20528"
+            ]
+        ]
+    },
+    {
+        "id": "7a1e3cdca7e8adec",
+        "type": "sqlstring-format",
+        "z": "f37e469f.6344c8",
+        "name": "SQL for Storing values",
+        "query": "INSERT INTO \"temp_hum\" (\"Temperature\", \"Humidity\") VALUES (?, ?);",
+        "vars": "payload.temp, payload.hum",
+        "outField": "query",
+        "x": 560,
+        "y": 460,
+        "wires": [
+            [
+                "25f0230611924260"
+            ]
+        ]
+    },
+    {
+        "id": "dfcd1ecb5c3b706b",
+        "type": "debug",
+        "z": "f37e469f.6344c8",
+        "name": "DB Debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 930,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "67d7236c65654fe2",
+        "type": "function",
+        "z": "f37e469f.6344c8",
+        "name": "Retrieve historical Humidity data",
+        "func": "// 參考Chart的Stored Data做法：https://github.com/node-red/node-red-dashboard/blob/master/Charts.md#stored-data\n// 先建立一個符合格式的空的result陣列\nconst result = [{\n    \"series\": [\"Humidity\"],\n    \"data\": [[]],\n    \"labels\": [\"\"]\n}];\n// 將payload中的每一筆記錄轉成合於格式的資料點物件，將其塞入result陣列中的data欄位的陣列中\nfor (let item of msg.payload) {\n    var a, b;\n    a = item.Datetime;\n    b = item.Humidity;\n    result[0].data[0].push({ \"x\":a, \"y\":b});\n}\n// 將mag.payload設為result陣列\nmsg.payload = result;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 160,
+        "wires": [
+            [
+                "936c585c70762f92",
+                "67cc732ef4bc92a4"
+            ]
+        ]
+    },
+    {
+        "id": "fc169012ac9368b0",
+        "type": "inject",
+        "z": "f37e469f.6344c8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 60,
+        "wires": [
+            [
+                "f0e73f1099779672"
+            ]
+        ]
+    },
+    {
+        "id": "936c585c70762f92",
+        "type": "ui_chart",
+        "z": "f37e469f.6344c8",
+        "name": "",
+        "group": "51f97a49.7f0384",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "Hum. History",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "4",
+        "removeOlderPoints": "200",
+        "removeOlderUnit": "604800",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1230,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "67cc732ef4bc92a4",
+        "type": "debug",
+        "z": "f37e469f.6344c8",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 880,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "f0e73f1099779672",
+        "type": "sqlstring-format",
+        "z": "f37e469f.6344c8",
+        "name": "",
+        "query": "SELECT * FROM (SELECT * FROM temp_hum ORDER BY \"Datetime\" DESC LIMIT 200) AS subquery ORDER BY \"Datetime\" ASC;",
+        "vars": "",
+        "outField": "query",
+        "x": 270,
+        "y": 60,
+        "wires": [
+            [
+                "f5625e4f082a7816"
+            ]
+        ]
+    },
+    {
+        "id": "7a29805490c04e3f",
+        "type": "debug",
+        "z": "f37e469f.6344c8",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "fb98fd567183d023",
+        "type": "function",
+        "z": "f37e469f.6344c8",
+        "name": "Retrieve historical Temperature data",
+        "func": "// 參考Chart的Stored Data做法：https://github.com/node-red/node-red-dashboard/blob/master/Charts.md#stored-data\n// 先建立一個符合格式的空的result陣列\nconst result = [{\n    \"series\": [\"Temperature\"],\n    \"data\": [[]],\n    \"labels\": [\"\"]\n}];\n// 將payload中的每一筆記錄轉成合於格式的資料點物件，將其塞入result陣列中的data欄位的陣列中\nfor (let item of msg.payload) {\n    var a, b;\n    a = item.Datetime;\n    b = item.Temperature;\n    result[0].data[0].push({ \"x\":a, \"y\":b});\n}\n// 將mag.payload設為result陣列\nmsg.payload = result;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 60,
+        "wires": [
+            [
+                "b0476497292e6b78",
+                "a58cc11e26797589"
+            ]
+        ]
+    },
+    {
+        "id": "b0476497292e6b78",
+        "type": "ui_chart",
+        "z": "f37e469f.6344c8",
+        "name": "",
+        "group": "97a7dd0e.47386",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "Temp. History",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "4",
+        "removeOlderPoints": "200",
+        "removeOlderUnit": "604800",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1240,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a58cc11e26797589",
+        "type": "debug",
+        "z": "f37e469f.6344c8",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "0b8070b7de79fec6",
+        "type": "sqlstring-format",
+        "z": "f37e469f.6344c8",
+        "name": "SQL for Retriving the last data",
+        "query": "SELECT * FROM temp_hum ORDER BY \"Datetime\" DESC LIMIT 1",
+        "vars": "",
+        "outField": "query",
+        "x": 590,
+        "y": 540,
+        "wires": [
+            [
+                "9d4eff2adf4adcc8"
+            ]
+        ]
+    },
+    {
+        "id": "316553620ed7f79a",
+        "type": "debug",
+        "z": "f37e469f.6344c8",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 980,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "d63c2339508bd8d0",
+        "type": "function",
+        "z": "f37e469f.6344c8",
+        "name": "Get Temperature",
+        "func": "// 參考Chart的Live Data做法：https://github.com/node-red/node-red-dashboard/blob/master/Charts.md#live-data\nvar result;\nresult = msg.payload;\nmsg.payload = result[0].Temperature;\nmsg.timestamp = result[0].Datetime;\nmsg.topic = \"Temperature\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1010,
+        "y": 540,
+        "wires": [
+            [
+                "b0476497292e6b78"
+            ]
+        ]
+    },
+    {
+        "id": "49f79e8e7b150c1d",
+        "type": "function",
+        "z": "f37e469f.6344c8",
+        "name": "Get Humidity",
+        "func": "// 參考Chart的Live Data做法：https://github.com/node-red/node-red-dashboard/blob/master/Charts.md#live-data\nvar result;\nresult = msg.payload;\nmsg.payload = result[0].Humidity;\nmsg.timestamp = result[0].Datetime;\nmsg.topic = \"Humidity\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 990,
+        "y": 580,
+        "wires": [
+            [
+                "936c585c70762f92"
+            ]
+        ]
+    },
+    {
+        "id": "f5625e4f082a7816",
+        "type": "postgresql",
+        "z": "f37e469f.6344c8",
+        "name": "Database",
+        "query": "SELECT * FROM ;",
+        "postgreSQLConfig": "a531153b436f8f0e",
+        "split": false,
+        "rowsPerMsg": "200",
+        "outputs": 1,
+        "x": 400,
+        "y": 60,
+        "wires": [
+            [
+                "7a29805490c04e3f",
+                "fb98fd567183d023",
+                "67d7236c65654fe2"
+            ]
+        ]
+    },
+    {
+        "id": "9d4eff2adf4adcc8",
+        "type": "postgresql",
+        "z": "f37e469f.6344c8",
+        "name": "Database",
+        "query": "SELECT * FROM ;",
+        "postgreSQLConfig": "a531153b436f8f0e",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 800,
+        "y": 540,
+        "wires": [
+            [
+                "316553620ed7f79a",
+                "d63c2339508bd8d0",
+                "49f79e8e7b150c1d"
+            ]
+        ]
+    },
+    {
+        "id": "25f0230611924260",
+        "type": "postgresql",
+        "z": "f37e469f.6344c8",
+        "name": "Database",
+        "query": "SELECT * FROM ;",
+        "postgreSQLConfig": "a531153b436f8f0e",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 740,
+        "y": 460,
+        "wires": [
+            [
+                "dfcd1ecb5c3b706b",
+                "0b8070b7de79fec6"
+            ]
+        ]
+    }
+]
